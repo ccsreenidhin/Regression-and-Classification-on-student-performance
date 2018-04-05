@@ -1,0 +1,50 @@
+{% extends 'parentdashboard.html' %}
+
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Results</h3>
+            </div>
+
+{% for sem in sems %}
+<div style="margin-top:30px;">
+<table class="table table-striped table-bordered table-list">
+  <thead>
+    <tr>
+      <th>SEMESTER</th>
+      <th>SUBJECTS</th>
+      <th>INTERNALS</th>
+      <th>INTERNAL MAX </th>
+      <th>MARKS </th>
+      <th>MAX</th>
+      <th>TOTAL</th>
+      <th>RESULT</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      {% for s in sem %}
+    <tr>
+        <td>{{ s.sem.semname }}</td>
+        <td>{{ s.sub }}</td>
+        <td>{{ s.internal }}</td>
+        <td>{{ s.internmaxi }}</td>
+        <td>{{ s.mark }}</td>
+        <td>{{ s.maxi }}</td>
+        <td>{{ s.total }}</td>
+        <td>{{ s.res }}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

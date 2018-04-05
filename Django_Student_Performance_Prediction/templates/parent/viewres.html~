@@ -1,0 +1,57 @@
+{% extends 'parentdashboard.html' %}
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">University Result</h3>
+            </div>
+
+<nav class="navbar navbar-inverse">
+
+    <ul class="nav navbar-nav">
+
+      <li><a href="#">SEM ONE</a></li>
+      <li><a href="#">SEM TWO</a></li>
+      <li><a href="#">SEM THREE</a></li>
+      <li><a href="#">SEM FOUR</a></li>
+      <li><a href="#">SEM FIVE</a></li>
+      <li><a href="#">SEM SIX</a></li>
+    </ul>
+</nav>
+
+
+
+
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+      <th>SUBJECTS </th>{{ que.mark }}
+      <th>INTERNAL MAX </th>
+      <th>INTERNALS</th>
+      <th>MAX</th>
+      <th>MARKS </th>
+      <th>TOTAL</th>
+      <th>RESULT</th>
+  </tr>
+  
+                       
+                          <tr class="ok">
+                           
+                            <td>{{ que.mark }}</td>
+                            <td>{{ que.day }}</td>
+                            <td>{{ que.status }}</td>
+                            
+                          </tr>
+                      
+
+                        </tbody>
+</table>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'parentdashboard.html' %}
+
+{% block contents %}
+
+
+<div class="profcon">
+
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ user }}</h3>
+            </div>
+
+            <div class="panel-body">
+              <div class="row">
+                 
+                <div class="col-md-5 col-lg-5 " align="center"> {% if profile.picture %} <img  class="img-circle " alt="User Pic" src="{{ profile.picture.url }}" height="250px" width="250px">{% endif %} </div>
+
+                <div class=" col-md-7 col-lg-7 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{ user }}</td>
+                      </tr>
+                      <tr>
+                        <td>ID number:</td>
+                        <td>{{ profile.idno }}</td>
+                      </tr>
+                      <tr>
+                        <td>Department:</td>
+                        <td>{{ profile.department }}</td>
+                      </tr>
+                      <tr>
+                        <td>Qualification:</td>
+                        <td>{{ profile.qualification }}</td>
+                      </tr>
+                      <tr>
+                        <td>Gender:</td>
+                        <td>{{ profile.gender }}</td>
+                      </tr>
+                      <tr>
+                        <td>Phone:</td>
+                        <td>{{ profile.phone }}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td><a href="mailto:{{ profile.email }}" >{{ profile.email }}</a></td>
+                      </tr>
+                      <tr>
+                        <td>About:</td>
+                        <td>{{ profile.about }}</td>
+                      </tr>
+                      <tr>
+                        <td>Address:</td>
+                        <td>{{ profile.address }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
