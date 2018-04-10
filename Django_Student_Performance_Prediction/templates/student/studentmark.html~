@@ -1,0 +1,88 @@
+{% extends 'dashboard.html' %}
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <nav class="nav navbar-dark navbar-right">
+                   <ul class="nav navbar-nav">
+                     <li><a href="{% url 'studentpro' pk=user.pk %}" class=" scroll hvr-underline-from-center">Profile</a></li>
+                     <li class="active"><a href="{% url 'attendanceres' pk=user.pk %}" class="hvr-underline-from-center">Attendance</a></li>
+                     <li><a href="{% url 'assignmentdet' pk=user.pk %}"  class="scroll hvr-underline-from-center">Assignment</a></li>
+                     <li><a href="#services"  class="scroll hvr-underline-from-center">MCQ's</a></li>
+                     <li><a href="#gallery" class="scroll hvr-underline-from-center">Performance</a></li>
+                     <li><a href="#contact" class=" scroll hvr-underline-from-center">Result</a></li>
+                   </ul>
+                 </nav>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Assignments</h3>
+            </div>
+
+
+<nav class="navbar navbar-inverse">
+
+    <ul class="nav navbar-nav">
+
+      <li><a href="#">SEM ONE</a></li>
+      <li><a href="#">SEM TWO</a></li>
+      <li><a href="#">SEM THREE</a></li>
+      <li><a href="#">SEM FOUR</a></li>
+      <li><a href="#">SEM FIVE</a></li>
+      <li><a href="#">SEM SIX</a></li>
+    </ul>
+</nav>
+
+
+<form method="POST" class="post-form" action="{% url 'subject' %}">
+  {% csrf_token %}
+
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+      <th>SUBJECTS</th>
+      <th>INTERNAL MAX </th>
+      <th>INTERNALS</th>
+      <th>MAX</th>
+      <th>MARKS </th>
+      <th>TOTAL</th>
+      <th>RESULT</th>
+  </tr>
+  <tr class="sem1">
+      <th>{{ form.sub }}</th>
+      <th>{{ form.internmaxi }}</th>
+      <th>{{ form.internal }}</th>
+      <th>{{ form.maxi }}</th>
+      <th>{{ form.mark }}</th>
+      <th>{{ form.total }}</th>
+      <th>{{ form.res }}</th>
+
+  </tr>
+  
+  <tr class="total">
+      <th><b>TOTAL MARK </b>{{ form.total }} </th>
+  </tr>
+  <tr>
+      <th><button type="submit" class="save btn btn-default">Save</button></th>
+  </tr>
+                            {% for att in form %}
+                          <tr class="ok">
+                            <td class="avatar">
+                              {% if att.user.picture %}
+                              <img src="{{ att.user.picture.url }}" width="50" height="50"> {% endif %}
+                            </td>
+                            <td>{{ att.user }}</td>
+                            <td>{{ att.day }}</td>
+                            <td>{{ att.status }}</td>
+                            
+                          </tr>
+                          {% endfor %}
+
+                        </tbody>
+</table>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
