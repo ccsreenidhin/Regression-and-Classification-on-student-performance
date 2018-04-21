@@ -1,0 +1,62 @@
+{% extends 'dashboard.html' %} {% block contents %}
+<div class="profcon">
+	<div class="row">
+		<div class="col-xs-12 toppad">
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Students</h3>
+				</div>
+
+				<div class="" style="margin:15px;">
+					<nav class="navbar navbar-default" role="navigation">
+
+						<form class="navbar-form" method="POST" action="{% url 'searchstud' %}">
+								{% csrf_token %}
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="search" name="item">
+								<div class="input-group-btn">
+									<button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						</form>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+					</nav>
+				</div>
+
+
+				<div class="panel-body">
+				{% for profile in childprofile %}
+					<div class="col-md-3 col-sm-6">
+						<div class="card hovercard">
+							<div class="cardheader">
+							</div>
+							<div class="avatar">
+								{% if profile.picture %}
+								<img alt="" src="{{ profile.picture.url }}">
+								{% endif %}
+							</div>
+							<div class="info">
+								<div class="title">
+									<a href="{% url 'studentpro' pk=profile.pk %}">{{ profile.user }}</a>
+								</div>
+								{% if profile.picture %}
+								<div class="desc">{{ profile.department }}</div>
+								{% endif %}
+								{% if profile.picture %}
+								<div class="desc">{{ profile.about }}</div>
+								{% endif %}
+							</div>
+							<div class="bottom">
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

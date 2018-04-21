@@ -1,0 +1,48 @@
+{% extends 'dashboard.html' %}
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Results</h3>
+            </div>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+      <th>SUBJECT</th>
+      <th>INTERNAL</th>
+      <th>MAX MARKS</th>
+      <th>EXTERNAL</th>
+      <th>MAX MARKS</th>
+      <th>TOTAL</th>
+      <th>RESULT</th>
+  </tr>
+  <form method="POST" class="post-form" action="{% url 'editres' pk=subject.pk %}">
+    {% csrf_token %}
+
+  <tr class="sem">
+      <td>{{ form.sub }}</td>
+      <td>{{ form.internal }}</td>
+      <td>{{ form.internmaxi }}</td>
+      <td>{{ form.mark }}</td>
+      <td>{{ form.maxi }}</td>
+      <td>{{ form.total }}</td>
+      <td>{{ form.res }}</td>
+      <td>{{ form.errors }}</td>
+  </tr>
+        <td><button type="submit" class="save btn btn-default">Save</button></td>
+  </form>
+  <tr>
+
+  </tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

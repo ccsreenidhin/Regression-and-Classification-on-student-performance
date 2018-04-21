@@ -1,0 +1,78 @@
+{% extends 'dashboard.html' %}
+
+{% block contents %}
+
+
+<div class="profcon">
+
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <nav class="nav navbar-dark navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'studentpro' pk=prof.pk %}" class=" scroll hvr-underline-from-center">Profile</a></li>
+              <li><a href="{% url 'attendanceres' pk=prof.pk %}" class="hvr-underline-from-center">Attendance</a></li>
+              <li><a href="{% url 'mcqmarks' pk=prof.pk %}" class=" scroll hvr-underline-from-center">MCQS</a></li>
+              <li><a href="{% url 'universityres' pk=prof.pk %}" class=" scroll hvr-underline-from-center"> University Results</a></li>
+            </ul>
+          </nav>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ prof.user.username }}</h3>
+            </div>
+
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-5 col-lg-5 " align="center"> {% if prof.picture %}<img  class="img-circle " alt="User Pic" src="{{ prof.picture.url }}" height="250px" width="250px"> {% endif %}</div>
+                <div class=" col-md-7 col-lg-7 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{ prof.user.username }}</td>
+                      </tr>
+                      <tr>
+                        <td>University number:</td>
+                        <td>{{ prof.univno }}</td>
+                      </tr>
+                      <tr>
+                        <td>Department:</td>
+                        <td>{{ prof.department }}</td>
+                      </tr>
+                      <tr>
+                        <td>Gender:</td>
+                        <td>{{ prof.gender }}</td>
+                      </tr>
+                      <tr>
+                        <td>Father:</td>
+                        <td>{{ prof.father }}</td>
+                      </tr>
+                      <tr>
+                        <td>Mother:</td>
+                        <td>{{ prof.mother }}</td>
+                      </tr>
+                      <tr>
+                        <td>Phone:</td>
+                        <td>{{ prof.phone }}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td><a href="mailto:{{ prof.email }}" >{{ prof.email }}</a></td>
+                      </tr>
+                      <tr>
+                        <td>About:</td>
+                        <td>{{ prof.about }}</td>
+                      </tr>
+                      <tr>
+                        <td>Address:</td>
+                        <td>{{ prof.address }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

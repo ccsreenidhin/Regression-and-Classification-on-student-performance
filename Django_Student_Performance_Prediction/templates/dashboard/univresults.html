@@ -1,0 +1,86 @@
+{% extends 'dashboard.html' %}
+{% block contents %}
+<div class="profcon">
+  <div class="row">
+    <div class="col-xs-12 toppad">
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ user }}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+
+            <div id="user" class="col-md-12">
+              <div class="panel panel-primary panel-table">
+                <div class="panel-body">
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="list">
+                      <div class = "container">
+                        <div class = "row">
+                          <div class = "col-sm-12">
+                      <nav class="navbar navbar-inverse">
+                        <div class="container">
+                          <ul class="nav navbar-nav">
+
+                            <li><a href="#">SEM ONE</a></li>
+                            <li><a href="#">SEM TWO</a></li>
+                            <li><a href="#">SEM THREE</a></li>
+                            <li><a href="#">SEM FOUR</a></li>
+                            <li><a href="#">SEM FIVE</a></li>
+                            <li><a href="#">SEM SIX</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+                      <table class="table table-striped table-bordered table-list">
+                        <thead>
+                          <tr>
+                            <th>SUBJECTS</th>
+                            <th>INTERNAL MAX </th>
+                            <th>INTERNALS</th>
+                            <th>MAX</th>
+                            <th>MARKS </th>
+                            <th>TOTAL</th>
+                            <th>RESULT</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <form method="POST" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <td>{{ form.sub1 }}</td>
+                              <td>{{ form.intern1max }}</td>
+                              <td>{{ form.intern1 }}</td>
+                              <td>{{ form.max1 }}</td>
+                              <td>{{ form.mark1 }}</td>
+                              <td>{{ form.total1 }}</td>
+                              <td>{{ form.res1 }}</td>
+                              <button type="submit">Submit</button>
+                            </form>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                      </div>
+                    </div>
+                    <!-- END id="list" -->
+
+                  </div>
+                  <!-- END tab-content -->
+                </div>
+              </div>
+              <!--END panel-table-->
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

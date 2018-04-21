@@ -1,0 +1,50 @@
+{% extends 'dashboard.html' %}
+
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ user }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class=" col-md-7 col-lg-7 ">
+                  <h1>Register Student/Parent </h1>
+                  <form method="POST" class="post-form">
+                    {% csrf_token %}
+                  <table class="table table-user-information tableform">
+                    <tbody>
+                      <tr>
+                        <td>Username:</td>
+                        <td>{{ form.username }}</td>
+                      </tr>
+                      <tr>
+                        <td>Password:</td>
+                        <td>{{ form.password1 }}</td>
+                      </tr>
+                      <tr>
+                        <td>Confirm Password:</td>
+                        <td>{{ form.password2 }}</td>
+                      </tr>
+                      <tr>
+                        <td>Select Group:</td>
+                        <td>{{ form.category }}</td>
+                      </tr>
+                      <tr>
+                        <td>{{ form.errors }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <button type="submit" class="save btn btn-primary">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'dashboard.html' %}
+
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <nav class="nav navbar-right">
+                   <ul class="nav navbar-nav">
+                     <li><a href="{% url 'parentpro' pk=user.pk %}" class=" scroll hvr-underline-from-center">Profile</a></li>
+                   </ul>
+                 </nav>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Parent Profile</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-5 col-lg-5 " align="center"> <img  class="img-circle " alt="User Pic" src="{{ pprof.picture.url }}" height="250px" width="250px"> </div>
+                <div class=" col-md-7 col-lg-7 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{ pprof.user }}</td>
+                      </tr>
+
+                      <tr>
+                        <td>Gender:</td>
+                        <td>{{ pprof.gender }}</td>
+                      </tr>
+
+                        <td>Phone:</td>
+                        <td>{{ pprof.phone }}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td><a href="mailto:{{ profile.email }}">{{ pprof.email }}</a></td>
+                      </tr>
+                      <tr>
+                        <td>About:</td>
+                        <td>{{ pprofe.about }}</td>
+                      </tr>
+                      <tr>
+                        <td>Address:</td>
+                        <td>{{ pprof.address }}</td>
+                      </tr>
+                      <tr>
+                        <td>Child:</td>
+                        <td>{{ pprof.child.user.username }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

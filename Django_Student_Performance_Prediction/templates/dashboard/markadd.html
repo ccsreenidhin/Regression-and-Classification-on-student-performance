@@ -1,0 +1,79 @@
+{% extends 'dashboard.html' %}
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Results</h3>
+            </div>
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+      <th>SUBJECT</th>
+      <th>INTERNAL</th>
+      <th>MAX MARKS</th>
+      <th>EXTERNAL</th>
+      <th>MAX MARKS</th>
+      <th>TOTAL</th>
+      <th>RESULT</th>
+  </tr>
+  <form method="POST" class="post-form" action="{% url 'markadd' pk=ures.pk %}">
+    {% csrf_token %}
+
+  <tr class="sem">
+      <td>{{ form.sub }}</td>
+      <td>{{ form.internal }}</td>
+      <td>{{ form.internmaxi }}</td>
+      <td>{{ form.mark }}</td>
+      <td>{{ form.maxi }}</td>
+      <td>{{ form.total }}</td>
+      <td>{{ form.res }}</td>
+      <td>{{ form.errors }}</td>
+  </tr>
+        <td><button type="submit" class="save btn btn-default">Save</button></td>
+  </form>
+  <tr>
+
+  </tr>
+</tbody>
+</table>
+
+
+<table class="table table-bordered table-striped table-hover">
+  <tr>
+      <th>SUBJECT</th>
+      <th>INTERNAL</th>
+      <th>MAX MARKS</th>
+      <th>EXTERNAL</th>
+      <th>MAX MARKS</th>
+      <th>TOTAL</th>
+      <th>RESULT</th>
+  </tr>
+  {% for subj in subjects %}
+  <tr class="sem">
+      <td>{{ subj.sub }}</td>
+      <td>{{ subj.internal }}</td>
+      <td>{{ subj.internmaxi }}</td>
+      <td>{{ subj.mark }}</td>
+      <td>{{ subj.maxi }}</td>
+      <td>{{ subj.total }}</td>
+      <td>{{ subj.res }}</td>
+
+  </tr>
+  <tr>
+      <form method="POST" class="post-form" action="{% url 'editres' pk=subj.pk %}">
+        {% csrf_token %}
+        <td><button type="submit" class="save btn btn-primary">Edit</button></td>
+      </form>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

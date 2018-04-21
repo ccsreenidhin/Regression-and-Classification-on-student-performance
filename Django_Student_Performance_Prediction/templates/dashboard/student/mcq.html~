@@ -1,0 +1,63 @@
+{% extends 'dashboard.html' %}
+
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ user }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class=" col-md-7 col-lg-7 ">
+                  <h1>MCQ</h1>
+                  <form method="POST" class="post-form">
+                    {% csrf_token %}
+                  <table class="table table-user-information tableform">
+                    <tbody>
+                      <tr>
+                        <td>Mcq:</td>
+                        <td>{{ form.mcq }}</td>
+                      </tr>
+                      <tr>
+                        <td>Question:</td>
+                        <td>{{ form.question }}</td>
+                      </tr>
+                      <tr>
+                        <td>Choice1:</td>
+                        <td>{{ form.c1 }}</td>
+                      </tr>
+                      <tr>
+                        <td>Choice2:</td>
+                        <td>{{ form.c2 }}</td>
+                      </tr>
+                      <tr>
+                        <td>Choice3:</td>
+                        <td>{{ form.c3 }}</td>
+                      </tr>
+                      <tr>
+                        <td>Choice4:</td>
+                        <td>{{ form.c4 }}</td>
+                      </tr>
+                      <tr>
+                        <td>Answer:</td>
+                        <td>{{ form.answer }}</td>
+                      </tr>
+                      <tr>
+                        <td>Marks:</td>
+                        <td>{{ form.marks }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <button type="submit" class="save btn btn-primary">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

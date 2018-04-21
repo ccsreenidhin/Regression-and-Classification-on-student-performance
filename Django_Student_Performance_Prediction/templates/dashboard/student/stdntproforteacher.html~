@@ -1,0 +1,77 @@
+{% extends 'dashboard.html' %}
+
+{% block contents %}
+<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+       <nav>
+         <ul class="nav navbar-nav">
+           <li><a href="{% url 'studentpro' pk=user.pk %}" class=" scroll hvr-underline-from-center">Profile</a></li>
+           <li class="active"><a href="{% url 'attendanceres' pk=user.pk %}" class="hvr-underline-from-center">Attendance</a></li>
+           <li><a href="{% url 'assignmentdet' pk=user.pk %}""  class="scroll hvr-underline-from-center">Assignment</a></li>
+           <li><a href="#services"  class="scroll hvr-underline-from-center">MCQ's</a></li>
+           <li><a href="#gallery" class="scroll hvr-underline-from-center">Performance</a></li>           
+           <li><a href="/universityres/" class=" scroll hvr-underline-from-center"> UNIVERSITY Result</a></li>
+         </ul>
+       </nav>
+
+     </div>
+<div class="profcon">
+
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ user }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-5 col-lg-5 " align="center"> <img  class="img-circle " alt="User Pic" src="{{ profile.picture.url }}" height="250px" width="250px"> </div>
+                <div class=" col-md-7 col-lg-7 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Name:</td>
+                        <td>{{ user }}</td>
+                      </tr>
+                      <tr>
+                        <td>ID number:</td>
+                        <td>{{ profile.idno }}</td>
+                      </tr>
+                      <tr>
+                        <td>Department:</td>
+                        <td>{{ profile.department }}</td>
+                      </tr>
+                      <tr>
+                        <td>Qualification:</td>
+                        <td>{{ profile.qualification }}</td>
+                      </tr>
+                      <tr>
+                        <td>Gender:</td>
+                        <td>{{ profile.gender }}</td>
+                      </tr>
+                      <tr>
+                        <td>Phone:</td>
+                        <td>{{ profile.phone }}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td><a href="mailto:{{ profile.email }}" >{{ profile.email }}</a></td>
+                      </tr>
+                      <tr>
+                        <td>About:</td>
+                        <td>{{ profile.about }}</td>
+                      </tr>
+                      <tr>
+                        <td>Address:</td>
+                        <td>{{ profile.address }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

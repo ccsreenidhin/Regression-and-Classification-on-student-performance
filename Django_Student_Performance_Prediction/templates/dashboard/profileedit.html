@@ -1,0 +1,59 @@
+{% extends 'dashboard.html' %}
+
+{% block contents %}
+<div class="profcon">
+      <div class="row">
+        <div class="col-xs-12 toppad" >
+
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ user }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class=" col-md-7 col-lg-7 ">
+                  <h1>Edit Profile</h1>
+                  <form method="POST" class="post-form">
+                    {% csrf_token %}
+                  <table class="table table-user-information tableform">
+                    <tbody>
+                      <tr>
+                        <td>Department:</td>
+                        <td>{{ form.department }}</td>
+                      </tr>
+                      <tr>
+                        <td>Qualification:</td>
+                        <td>{{ form.qualification }}</td>
+                      </tr>
+                      <tr>
+                        <td>Gender:</td>
+                        <td>{{ form.gender }}</td>
+                      </tr>
+                      <tr>
+                        <td>Phone:</td>
+                        <td>{{ form.phone }}</td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td>{{ form.email }}</td>
+                      </tr>
+                      <tr>
+                        <td>About:</td>
+                        <td>{{ form.about }}</td>
+                      </tr>
+                      <tr>
+                        <td>Address:</td>
+                        <td>{{ form.address }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <button type="submit" class="save btn btn-primary">Save</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

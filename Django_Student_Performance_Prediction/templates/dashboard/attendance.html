@@ -1,0 +1,151 @@
+{% extends 'dashboard.html' %} {% block contents %}
+<div class="profcon">
+  <div class="row">
+    <div class="col-xs-12 toppad">
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Attendance</h3>
+        </div>
+
+        <div class="" style="margin:15px;">
+          <nav class="navbar navbar-default" role="navigation">
+
+            <form class="navbar-form" role="search" method="POST" class="post-form" action="{% url 'searchattend' %}">
+                {% csrf_token %}
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="search" name="item">
+                <div class="input-group-btn">
+                  <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+          </nav>
+</div>
+<div>
+	 <nav class="container">
+         <ul class="nav navbar-nav">
+           <li><a class="hvr-underline-from-center">ECE</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='one' dept='ece' %}"  class="scroll hvr-underline-from-center">sem1</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='two' dept='ece' %}"  class="scroll hvr-underline-from-center">sem2</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='three' dept='ece' %}" class="scroll hvr-underline-from-center">sem3</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='four' dept='ece' %}" class=" scroll hvr-underline-from-center">sem4</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='five' dept='ece' %}" class=" scroll hvr-underline-from-center">sem5</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='six' dept='ece' %}" class=" scroll hvr-underline-from-center">sem6</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='seven' dept='ece' %}" class=" scroll hvr-underline-from-center">sem7</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='eight' dept='ece' %}" class=" scroll hvr-underline-from-center">sem8</a></li>
+         </ul>
+	</nav>
+</div>
+<div>
+	 <nav class="container">
+	<ul class="nav navbar-nav">
+           <li><a class="hvr-underline-from-center">CSE</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='one' dept='cse' %}"  class="scroll hvr-underline-from-center">sem1</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='two' dept='cse' %}"  class="scroll hvr-underline-from-center">sem2</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='three' dept='cse' %}" class="scroll hvr-underline-from-center">sem3</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='four' dept='cse' %}" class=" scroll hvr-underline-from-center">sem4</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='five' dept='cse' %}" class=" scroll hvr-underline-from-center">sem5</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='six' dept='cse' %}" class=" scroll hvr-underline-from-center">sem6</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='seven' dept='cse' %}" class=" scroll hvr-underline-from-center">sem7</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='eight' dept='cse' %}" class=" scroll hvr-underline-from-center">sem8</a></li>
+         </ul>
+	</nav>
+</div>
+<div>
+	 <nav class="container">
+	<ul class="nav navbar-nav">
+           <li><a class="hvr-underline-from-center">MECH</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='one' dept='mech' %}"  class="scroll hvr-underline-from-center">sem1</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='two' dept='mech' %}"  class="scroll hvr-underline-from-center">sem2</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='three' dept='mech' %}" class="scroll hvr-underline-from-center">sem3</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='four' dept='mech' %}" class=" scroll hvr-underline-from-center">sem4</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='five' dept='mech' %}" class=" scroll hvr-underline-from-center">sem5</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='six' dept='mech' %}" class=" scroll hvr-underline-from-center">sem6</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='seven' dept='mech' %}" class=" scroll hvr-underline-from-center">sem7</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='eight' dept='mech' %}" class=" scroll hvr-underline-from-center">sem8</a></li>
+         </ul>
+	</nav>
+</div>
+<div>
+	 <nav class="container">
+	<ul class="nav navbar-nav">
+           <li><a class="hvr-underline-from-center">CIVIL</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='one' dept='civil' %}"  class="scroll hvr-underline-from-center">sem1</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='two' dept='civil' %}"  class="scroll hvr-underline-from-center">sem2</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='three' dept='civil' %}" class="scroll hvr-underline-from-center">sem3</a></li>
+           <li><a href="{% url 'attendance' pk=0 div='four' dept='civil' %}" class=" scroll hvr-underline-from-center">sem4</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='five' dept='civil' %}" class=" scroll hvr-underline-from-center">sem5</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='six' dept='civil' %}" class=" scroll hvr-underline-from-center">sem6</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='seven' dept='civil' %}" class=" scroll hvr-underline-from-center">sem7</a></li>
+	   <li><a href="{% url 'attendance' pk=0 div='eight' dept='civil' %}" class=" scroll hvr-underline-from-center">sem8</a></li>
+         </ul>
+       </nav>
+
+        </div>
+
+
+        <div class="panel-body">
+          <div class="row">
+
+            <div id="user" class="col-md-12">
+              <div class="panel panel-primary panel-table">
+                <div class="panel-body">
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="list">
+                      <table class="table table-striped table-bordered table-list">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Day</th>
+                            <th>Status</th>
+                            <th>Save</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+			{% for student in students %}
+                          <tr class="ok">
+                            {% if form %}
+                            <form method="POST" class="post-form" action="{% url 'attendance' pk=student.pk div=dv %}">
+                              {% csrf_token %}
+                              <td>{{ student.username}}</td>
+                              <td>{{ form.day }}</td>
+                              <td>{{ form.status }}</td>
+                              <td><button type="submit" class="save btn btn-primary">Save</button></td>
+                            </form>
+                            {% endif %}
+                          </tr>
+			{% endfor %}
+                          {% for att in attend %}
+                          <tr class="ok">
+                            <td>{{ att.user }}</td>
+                            <td>{{ att.day }}</td>
+                            <td>{{ att.status }}</td>
+                            <form method="POST" class="post-form" action="{% url 'removeattend' pk=att.pk %}">
+                              {% csrf_token %}
+                              <td><button type="submit" class="save btn btn-primary">Delete</button></td>
+                            </form>
+                          </tr>
+                          {% endfor %}
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- END id="list" -->
+
+                  </div>
+                  <!-- END tab-content -->
+                </div>
+              </div>
+              <!--END panel-table-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
