@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+	<div class="banner">
+		<h3>The best learning institutions</h3>
+		<h2 class="test"><span>STUDENT ACADEMIC PERFORMANCE PREDICTION SYSTEM</span></h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+	</div>
+</div>
+<!-- About -->
+	<div id="about" class="about">
+	<div class="container">
+	<div class="w3-about-head">
+		<h3>ABOUT US</h3>
+		</div>
+		<div class="w3-agileitsline">
+		<h3>This is just a demo project uploaded for testing purpose......</h3>
+		</div>
+			<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<div class="col-md-4 agileits_banner_bottom_left">
+			<div class="agileinfo_banner_bottom_pos">
+				<div class="w3_agileits_banner_bottom_pos_grid">
+					<div class=" wthree_banner_bottom_grid_left">
+						<a href="{% url 'auth_login' %}"><div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
+								<i class="fa fa-sign-in" aria-hidden="true"></i>
+						</div></a>
+					</div>
+					<div class=" wthree_banner_bottom_grid_right">
+						<h4>Students</h4>
+						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 agileits_banner_bottom_left1">
+			<div class="agileinfo_banner_bottom_pos">
+				<div class="w3_agileits_banner_bottom_pos_grid">
+					<div class=" wthree_banner_bottom_grid_left">
+						<a href="{% url 'auth_login' %}"><div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
+							<i class="fa fa-sign-in" aria-hidden="true"></i>
+						</div></a>
+					</div>
+					<div class=" wthree_banner_bottom_grid_right">
+						<h4>Teachers</h4>
+						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 agileits_banner_bottom_left2">
+			<div class="agileinfo_banner_bottom_pos">
+				<div class="w3_agileits_banner_bottom_pos_grid">
+					<div class=" wthree_banner_bottom_grid_left">
+						<a href="{% url 'auth_login' %}"><div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
+							<i class="fa fa-sign-in" aria-hidden="true"></i>
+						</div></a>
+					</div>
+					<div class=" wthree_banner_bottom_grid_right">
+						<h4>Parents</h4>
+						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+<!-- //banner-bottom -->
+	</div>
+</div>
+	<!-- //About -->
+<!-- //services -->
+<div class="w3-services" id="services">
+
+	<div class="w3-services-head">
+	<h3>FEATURES AND SPECIFICATIONS</h3>
+	</div>
+	<div class="w3-services-grids">
+		<div class="col-md-6 w3-services-left-grid">
+			<img src="{% static 'images/ban4.jpg' %}" alt="img">
+		</div>
+		<div class="col-md-6 w3-services-right-grid">
+		<div class="col-md-6 w3-services-right1-grid">
+			<h3>Features</h3>
+			<ul>
+				<li><span class="col-md-2">01</span><p class="col-md-10">Dashboard profiles to groups-teachers, parents, students</p></li>
+				<li><span class="col-md-2">02</span><p class="col-md-10">Teachers add attendance, marks and other details</p></li>
+				<li><span class="col-md-2">03</span><p class="col-md-10">Linear regression to analyse and predict future performance</p></li>
+				<li><span class="col-md-2">04</span><p class="col-md-10">K-means to cluster students around low, average and heigh performers</p></li>
+				<li><span class="col-md-2">05</span><p class="col-md-10">Students and parents can view their performance</p></li>
+			</ul>
+		</div>
+		<div class="col-md-6 w3-services-right1-grid">
+			<h3>Specifications</h3>
+		<ul>
+				<li><span class="col-md-2">01</span><p class="col-md-10">Django==1.11</p></li>
+				<li><span class="col-md-2">02</span><p class="col-md-10">pillow</p></li>
+				<li><span class="col-md-2">03</span><p class="col-md-10">numpy</p></li>
+				<li><span class="col-md-2">04</span><p class="col-md-10">sklearn</p></li>
+				<li><span class="col-md-2">05</span><p class="col-md-10">chart.js</p></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- //services -->
+
+<!-- gallery -->
+		<div class="gallery"  id="gallery">
+			<div class="container">
+				<div class="gallery-w3-head">
+				<h4>Our Gallery</h4>
+				</div>
+				<div id="jzBox" class="jzBox">
+					<div id="jzBoxNextBig"></div>
+					<div id="jzBoxPrevBig"></div>
+					<img src="#" id="jzBoxTargetImg" alt="">
+					<div id="jzBoxBottom">
+						<div id="jzBoxTitle"></div>
+						<div id="jzBoxCounter"></div>
+						<span id="jzBoxMoreItems">
+							<i class="glyphicon glyphicon-chevron-left" id="jzBoxPrev"></i> &nbsp;
+							<i class="glyphicon glyphicon-chevron-right" id="jzBoxNext"></i> &nbsp;
+						</span>
+						<i class="glyphicon glyphicon-remove-circle" id="jzBoxClose"></i>
+					</div>
+				</div>
+				<div class="gallery-grids-row">
+					<div class="col-md-4 gallery-grid">
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g111.jpg' %}" class="jzBoxLink item-hover" title="Maecenas sodales tortor ac ligula ultrices dictum et quis urna.">
+								<img src="{% static 'images/g111.jpg' %}" class="img-responsive" alt=" " />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g222.jpg' %}"class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g222.jpg' %}" alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g333.jpg' %}"class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g333.jpg' %}" alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="col-md-4 gallery-grid">
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g4.jpg' %}" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g4.jpg' %}" alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g444.jpg' %}" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g444.jpg' %}"alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="col-md-4 gallery-grid">
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g555.jpg' %}" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g555.jpg' %}" alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g666.jpg' %}" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g666.jpg' %}" alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="wpf-demo-4">
+							<a href="{% static 'images/g777.jpg' %}"class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+								<img src="{% static 'images/g777.jpg' %}"alt=" " class="img-responsive" />
+								<div class="view-caption">
+									<p>Our Gallery</p>
+								</div>
+							</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- //gallery -->
+
+<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title"> Merit education </h4>
+					</div>
+					<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/3.jpg" alt="" />
+						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper.  Cras tempor massa luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //modal -->
+<!--count-->
+			<div class="count-agileits">
+
+					<div class="count-grids">
+					<div class="count-bgcolor-w3ls">
+						<div class="col-md-4 count-grid">
+						<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1052' data-delay='.5' data-increment="100">1052</div>
+									<span></span>
+									<h5>Placed students</h5>
+							</div>
+						</div>
+						<div class="col-md-4 count-grid">
+						<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='372' data-delay='.5' data-increment="100">372</div>
+									<span></span>
+									<h5>several departments </h5>
+							</div>
+						</div>
+						<div class="col-md-4 count-grid">
+						<i class="fa fa-user-plus" aria-hidden="true"></i>
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='105209' data-delay='.5' data-increment="100">105209</div>
+									<span></span>
+									<h5>completed students</h5>
+								</div>
+						</div>
+						<div class="clearfix"></div>
+						</div>
+					</div>
+			</div>
+				<!--count-->
+
+
+	<!-- coureses online -->
+	<!-- map  -->
+	<div class="w3-agile-map1" style="margin:30px 0 30px 0;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.2508055091607!2d-0.07901828417095903!3d51.54529987964132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c91f36ba6cb%3A0xa3353c086b61a5e4!2s14+Tottenham+Rd%2C+London+N1+4EP%2C+UK!5e0!3m2!1sen!2sin!4v1484802856551" ></iframe>
+</div>
+<!-- map -->
+<!-- coureses online -->
+{% endblock %}
